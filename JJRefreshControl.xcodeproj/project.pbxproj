@@ -14,6 +14,7 @@
 		30BAF19A2382E0A4007956E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BAF1982382E0A4007956E2 /* LaunchScreen.storyboard */; };
 		30BAF19D2382E0A4007956E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BAF19C2382E0A4007956E2 /* main.m */; };
 		30BAF1A72382E0A4007956E2 /* JJRefreshControlUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BAF1A62382E0A4007956E2 /* JJRefreshControlUITests.m */; };
+		9077CDA5C1FEB9171F4B8584 /* libPods-JJRefreshControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3FDAA61E8B792033FCB61D1 /* libPods-JJRefreshControl.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		30BAF1A22382E0A4007956E2 /* JJRefreshControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JJRefreshControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30BAF1A62382E0A4007956E2 /* JJRefreshControlUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJRefreshControlUITests.m; sourceTree = "<group>"; };
 		30BAF1A82382E0A4007956E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		310FF7F090F6E2E21ABC85F5 /* Pods-JJRefreshControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJRefreshControl.release.xcconfig"; path = "Pods/Target Support Files/Pods-JJRefreshControl/Pods-JJRefreshControl.release.xcconfig"; sourceTree = "<group>"; };
+		7DB9A06BF6909A163EC75D54 /* Pods-JJRefreshControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJRefreshControl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JJRefreshControl/Pods-JJRefreshControl.debug.xcconfig"; sourceTree = "<group>"; };
+		A3FDAA61E8B792033FCB61D1 /* libPods-JJRefreshControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JJRefreshControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9077CDA5C1FEB9171F4B8584 /* libPods-JJRefreshControl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 				30BAF18C2382E0A3007956E2 /* JJRefreshControl */,
 				30BAF1A52382E0A4007956E2 /* JJRefreshControlUITests */,
 				30BAF18B2382E0A3007956E2 /* Products */,
+				C993FEB105987C1565610985 /* Pods */,
+				F94480DD89B53867EA833E85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +110,23 @@
 			path = JJRefreshControlUITests;
 			sourceTree = "<group>";
 		};
+		C993FEB105987C1565610985 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DB9A06BF6909A163EC75D54 /* Pods-JJRefreshControl.debug.xcconfig */,
+				310FF7F090F6E2E21ABC85F5 /* Pods-JJRefreshControl.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F94480DD89B53867EA833E85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3FDAA61E8B792033FCB61D1 /* libPods-JJRefreshControl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +134,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30BAF1AB2382E0A4007956E2 /* Build configuration list for PBXNativeTarget "JJRefreshControl" */;
 			buildPhases = (
+				D96032E53148A211940C7CD6 /* [CP] Check Pods Manifest.lock */,
 				30BAF1862382E0A3007956E2 /* Sources */,
 				30BAF1872382E0A3007956E2 /* Frameworks */,
 				30BAF1882382E0A3007956E2 /* Resources */,
@@ -197,6 +222,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D96032E53148A211940C7CD6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JJRefreshControl-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30BAF1862382E0A3007956E2 /* Sources */ = {
@@ -361,6 +411,7 @@
 		};
 		30BAF1AC2382E0A4007956E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DB9A06BF6909A163EC75D54 /* Pods-JJRefreshControl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -377,6 +428,7 @@
 		};
 		30BAF1AD2382E0A4007956E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 310FF7F090F6E2E21ABC85F5 /* Pods-JJRefreshControl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
